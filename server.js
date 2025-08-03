@@ -19,10 +19,10 @@ app.post("/send-sms", async (req, res) => {
 
   try {
     await client.messages.create({
-      body: `New Payment Request: ${name} sent ${amount} BDT`,
-      from: "+1xxxxxxxxxx", // তোমার Twilio verified number
-      to: adminPhone
-    });
+  body: `New Payment Request: ${name} sent ${amount} BDT`,
+  from: "+12567927233",  // তোমার Twilio নম্বর
+  to: adminPhone
+});
 
     res.json({ success: true, message: "SMS sent successfully!" });
   } catch (error) {
